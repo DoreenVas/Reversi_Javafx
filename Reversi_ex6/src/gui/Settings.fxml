@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.paint.Color?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SettingsController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="9.0" prefWidth="53.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="391.0" minWidth="10.0" prefWidth="290.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="255.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Game Settings" GridPane.columnIndex="1">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label text="Starting Player" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Color Player 1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Color Player 2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="submit" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button fx:id="back" mnemonicParsing="false" prefHeight="39.0" prefWidth="228.0" text="Return" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label text="Board Size" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <ChoiceBox fx:id="startPlayer" prefHeight="39.0" prefWidth="194.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+       <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Player 1" />
+                        <String fx:value="Player 2" />
+                    </FXCollections>
+                </items>
+                <value>
+                    <String fx:value="Player 1" />
+                </value>
+      </ChoiceBox>
+      
+      <ColorPicker fx:id="colorPicker1" editable="true" prefHeight="39.0" prefWidth="194.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      			<value>
+                   <Color blue="0.0" green="0.0" red="0.0" />
+                </value>
+      </ColorPicker>
+      <ColorPicker fx:id="colorPicker2" prefHeight="39.0" prefWidth="192.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <ChoiceBox fx:id="boardSize" prefHeight="39.0" prefWidth="193.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+       <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <Integer fx:value="4" />
+                        <Integer fx:value="6" />
+                        <Integer fx:value="8" />
+                        <Integer fx:value="10" />
+                        <Integer fx:value="12" />
+                        <Integer fx:value="14" />
+                        <Integer fx:value="16" />
+                        <Integer fx:value="18" />
+                        <Integer fx:value="20" />
+                    </FXCollections>
+       </items>
+       <value>
+              <Integer fx:value="8" />
+       </value>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ChoiceBox>
+   </children>
+</GridPane>
