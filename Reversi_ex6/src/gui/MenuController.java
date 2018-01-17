@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class MenuController {
@@ -23,7 +22,7 @@ public class MenuController {
 			Stage stage = (Stage) play.getScene().getWindow();
 			HBox root = (HBox)FXMLLoader.load(getClass().getResource("Game.fxml"));
 			Scene scene = new Scene(root,400,400);
-			stage.setTitle("Reversi Game");
+			stage.setTitle("Play Game");
 			stage.setScene(scene);
 			stage.show();
 		} catch(Exception e) {
@@ -37,6 +36,7 @@ public class MenuController {
 			Stage stage = (Stage) settings.getScene().getWindow();
 			GridPane root = (GridPane)FXMLLoader.load(getClass().getResource("Settings.fxml"));
 			Scene scene = new Scene(root,600,400);
+			scene.getStylesheets().add(getClass().getResource("settings.css").toExternalForm());
 			stage.setTitle("Game Settings");
 			stage.setScene(scene);
 			stage.show();

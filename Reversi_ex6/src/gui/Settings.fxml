@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.collections.*?>
@@ -33,10 +34,10 @@
       <Label text="Starting Player" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <Label text="Color Player 1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
       <Label text="Color Player 2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-      <Button fx:id="submit" mnemonicParsing="false" prefHeight="39.0" prefWidth="238.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-      <Button fx:id="back" mnemonicParsing="false" prefHeight="39.0" prefWidth="228.0" text="Return" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="238.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="228.0" text="Return" GridPane.columnIndex="2" GridPane.rowIndex="5" />
       <Label text="Board Size" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-      <ChoiceBox fx:id="startPlayer" prefHeight="39.0" prefWidth="194.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+      <ChoiceBox fx:id="startPlayer" maxWidth="-Infinity" prefHeight="39.0" prefWidth="188.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
        <items>
                     <FXCollections fx:factory="observableArrayList">
                         <String fx:value="Player 1" />
@@ -48,13 +49,13 @@
                 </value>
       </ChoiceBox>
       
-      <ColorPicker fx:id="colorPicker1" editable="true" prefHeight="39.0" prefWidth="194.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+      <ColorPicker fx:id="colorPicker1" editable="true" prefHeight="39.0" prefWidth="188.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
       			<value>
                    <Color blue="0.0" green="0.0" red="0.0" />
                 </value>
       </ColorPicker>
-      <ColorPicker fx:id="colorPicker2" prefHeight="39.0" prefWidth="192.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-      <ChoiceBox fx:id="boardSize" prefHeight="39.0" prefWidth="193.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+      <ColorPicker fx:id="colorPicker2" prefHeight="39.0" prefWidth="188.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <ChoiceBox fx:id="boardSize" prefHeight="39.0" prefWidth="188.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
        <items>
                     <FXCollections fx:factory="observableArrayList">
                         <Integer fx:value="4" />
