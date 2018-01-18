@@ -43,7 +43,7 @@ public class Board {
 	}
 	
 	
-	Cell cellAt(int row, int col) {
+	public Cell cellAt(int row, int col) {
 	    return this.board[row][col];
 	}
 	

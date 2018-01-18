@@ -1,6 +1,8 @@
 package reversi;
 import java.util.ArrayList;
 import java.util.List;
+
+import javafx.scene.paint.Color;
 import javafx.util.Pair;
 
 public abstract class Player {
@@ -9,6 +11,7 @@ public abstract class Player {
 	protected Contains type;
 	protected int score;
 	protected boolean noMoves;
+	protected Color color;
 	
 	/***************************************************************************************************
 	* constructor name:Player
@@ -35,7 +38,14 @@ public abstract class Player {
 	public int getScore() {
 	    return score;
 	}
-
+	
+	 public Color getColor(){
+		 return color;
+	 }
+	 
+	 public void setColor(Color color){
+		 this.color=color;
+	 }
 
 	public boolean isNoMoves() {
 	    return noMoves;

@@ -21,7 +21,7 @@ public class MenuController {
 		try {
 			Stage stage = (Stage) play.getScene().getWindow();
 			HBox root = (HBox)FXMLLoader.load(getClass().getResource("Game.fxml"));
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,600,400);
 			stage.setTitle("Play Game");
 			stage.setScene(scene);
 			stage.show();

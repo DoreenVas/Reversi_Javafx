@@ -1,4 +1,4 @@
-Player 2
-0x4d001aff
-0xffffffff
-16
+Player 1
+0x804d80ff
+0xcc6633ff
+8
