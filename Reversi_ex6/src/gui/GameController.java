@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Pair;
 import reversi.*;
@@ -46,6 +47,7 @@ public class GameController implements Initializable {
     private int boardSize;
     private Board board;
     private GameLogic logic;
+    private static final int height =400;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -56,17 +58,21 @@ public class GameController implements Initializable {
 		player2= new HumanPlayer(display,Contains.White);
 		player1.setColor(color1);
 		player2.setColor(color2);
+		Color currentColor;
 		if(currentP==1){//player 1 starts
+			currentColor=color1;
 			logic=new DefaultLogic(player1,player2,board);
 		}else{//player 2 starts
+			currentColor=color2;
 			logic=new DefaultLogic(player2,player1,board);
 		}
-		this.boardfx=new GameBoard(board,color1,color2);
-		boardfx.setPrefWidth(400);
-		boardfx.setPrefHeight(400);
+		this.boardfx=new GameBoard(board,color1,color2, height);
+		boardfx.setPrefWidth(height);
+		boardfx.setPrefHeight(height);
 		root.getChildren().add(0, boardfx);
 		//set labels texts
 		currentPlayer.setText("Player "+currentP);
+		currentPlayer.setTextFill(currentColor);
 		player1Score.setText("2");
 		player2Score.setText("2");
 		boardfx.setOnMouseClicked(event ->{
@@ -184,6 +190,7 @@ public class GameController implements Initializable {
 		currentP=3-currentP;
 		logic.switchPlayer();
 		currentPlayer.setText("Player "+currentP);
+		currentPlayer.setTextFill(rival.getColor());
 		player1Score.setText(Integer.toString(player1.getScore()));
 		player2Score.setText(Integer.toString(player2.getScore()));
 		
@@ -196,41 +203,3 @@ public class GameController implements Initializable {
         alert.showAndWait();
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

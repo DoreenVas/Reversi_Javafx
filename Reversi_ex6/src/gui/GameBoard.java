@@ -2,9 +2,6 @@ package gui;
 
 import reversi.*;
 
-import java.io.IOException;
-
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -17,13 +14,12 @@ public class GameBoard extends GridPane {
 	private Color color2;
 	
 	//constructor
-	public GameBoard(Board board,Color color1,Color color2) {
+	public GameBoard(Board board,Color color1,Color color2, double height) {
 		this.board=board;
 		this.color1=color1;
 		this.color2=color2;
 		int boardSize=board.getBoardSize();
-		double height = this.getPrefHeight();
-		double cellSize = height /boardSize;
+		double cellSize = height /boardSize-1;
 		for (int i = 0; i < boardSize; i++) {
 			for (int j = 0; j < boardSize; j++) {
 				GameCell cell=new GameCell(cellSize);
@@ -37,17 +33,6 @@ public class GameBoard extends GridPane {
 				this.add(cell,i,j);
 			}
 		}
-		/*
-		   FXMLLoader fxmlLoader = new
-	                FXMLLoader(getClass().getResource("Board.fxml"));
-	        fxmlLoader.setRoot(this);
-	        fxmlLoader.setController(this);
-	        try {
-	            fxmlLoader.load();
-	        } catch (IOException exception) {
-	            throw new RuntimeException(exception);
-	        }
-	        */
 	}
 	
 	public void draw() {

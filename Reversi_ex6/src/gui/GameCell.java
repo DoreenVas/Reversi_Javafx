@@ -14,12 +14,12 @@ public class GameCell extends StackPane {
 	public GameCell(double size){
 		this.setPrefHeight(size);
 		this.setPrefWidth(size);
-		Rectangle rectangle=new Rectangle(size,size,Color.TRANSPARENT);
-		rectangle.setStrokeWidth(2);
+		Rectangle rectangle=new Rectangle(size,size, Color.TRANSPARENT);
+		rectangle.setStrokeWidth(1);
 		rectangle.setStroke(Color.BLACK);
 		setAlignment(Pos.CENTER);
 		this.getChildren().add(rectangle);
-		this.radius=size/2;
+		this.radius=size/2.5;
 		this.circle=new Circle(radius,Color.TRANSPARENT);
 		this.getChildren().add(circle);
 		
