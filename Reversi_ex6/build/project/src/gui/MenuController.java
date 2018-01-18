@@ -8,11 +8,6 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-/**
- * Class: MenuController
- * the main Menu to get to setting and the game
- *
- */
 public class MenuController {
 	@FXML
 	private Button play;
@@ -21,17 +16,12 @@ public class MenuController {
 	@FXML
 	private Button settings;
 	
-	/**
-	 * function name: play
-	 * when the button is clicked a new game window opens
-	 */
 	@FXML
 	protected void play() {
 		try {
 			Stage stage = (Stage) play.getScene().getWindow();
 			HBox root = (HBox)FXMLLoader.load(getClass().getResource("Game.fxml"));
 			Scene scene = new Scene(root,600,400);
-			scene.getStylesheets().add(getClass().getResource("game.css").toExternalForm());
 			stage.setTitle("Play Game");
 			stage.setScene(scene);
 			stage.show();
@@ -40,10 +30,6 @@ public class MenuController {
 		}
 	}
 	
-	/**
-	 * function name: settings
-	 * when the button is clicked a new settings window opens
-	 */
 	@FXML
 	protected void settings() {					
 		try {
@@ -59,10 +45,6 @@ public class MenuController {
 		}
 	}
 	
-	/**
-	 * function name: exit
-	 * when the button is clicked the window closes
-	 */
 	@FXML
 	protected void exit() {
 		Stage stage = (Stage) exit.getScene().getWindow();

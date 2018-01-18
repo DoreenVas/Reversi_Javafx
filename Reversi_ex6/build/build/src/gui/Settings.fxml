@@ -26,35 +26,17 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Label text="Game Settings" textFill="WHITE" GridPane.columnIndex="1">
+      <Label text="Game Settings" GridPane.columnIndex="1">
          <font>
-            <Font name="Eras Medium ITC" size="40.0" />
+            <Font size="40.0" />
          </font>
       </Label>
-      <Label text="Starting Player" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
-         <font>
-            <Font size="21.0" />
-         </font></Label>
-      <Label text="Color Player 1" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
-         <font>
-            <Font size="22.0" />
-         </font></Label>
-      <Label text="Color Player 2" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
-         <font>
-            <Font size="22.0" />
-         </font></Label>
-      <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" prefHeight="44.0" prefWidth="117.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="5">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="117.0" text="Return" GridPane.columnIndex="2" GridPane.rowIndex="5">
-         <font>
-            <Font size="20.0" />
-         </font></Button>
-      <Label text="Board Size" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
-         <font>
-            <Font size="22.0" />
-         </font></Label>
+      <Label text="Starting Player" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="Color Player 1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="Color Player 2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="238.0" text="Submit" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Button fx:id="back" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="228.0" text="Return" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Label text="Board Size" GridPane.columnIndex="1" GridPane.rowIndex="4" />
       <ChoiceBox fx:id="startPlayer" maxWidth="-Infinity" prefHeight="39.0" prefWidth="188.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
        <items>
                     <FXCollections fx:factory="observableArrayList">

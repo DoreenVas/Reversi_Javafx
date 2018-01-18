@@ -1,0 +1,41 @@
+commit 28ccb7efcda5287643c67bf4087842453f75b7c0
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Thu Jan 18 14:51:48 2018 +0200
+
+    GuiDisplay added
+
+commit a496643823e6bda5b50da50169ce124b9f2a737f
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Thu Jan 18 13:57:22 2018 +0200
+
+    bug fixed
+
+commit 344802d47954f58d9da6b228ae4c739ed3297c0a
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Thu Jan 18 12:12:40 2018 +0200
+
+    code done ,bug not fixed
+
+commit 7053fdaca18b9adbf9527d0a44f689eb813a31c2
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Wed Jan 17 15:38:17 2018 +0200
+
+    settings complete
+
+commit 726c628b85c194c6eac7016a0d29fe1a8131f1c8
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Wed Jan 17 03:34:02 2018 +0200
+
+    write settings to file added
+
+commit 0b0ddea0f22ca2695544fbf14fcedbb4a4cdf71a
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Wed Jan 17 01:39:47 2018 +0200
+
+    menu done settings almost
+
+commit f8780c773796901be8f67f326c2971898bef56ba
+Author: Doreen <Doreen@DESKTOP-S59AJ7A.Home>
+Date:   Tue Jan 16 01:49:37 2018 +0200
+
+    initial commit
