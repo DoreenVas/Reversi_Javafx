@@ -1,4 +1,4 @@
 Player 1
 0xcc3333ff
 0x1a3399ff
-6
+4

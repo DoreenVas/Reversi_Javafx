@@ -47,13 +47,14 @@ public class GameController implements Initializable {
     private int boardSize;
     private Board board;
     private GameLogic logic;
+    private Display display;
     private static final int height =400;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		setVariables();
 		this.board=new Board(boardSize);
-		Display display=new ConsoleDisplay();
+		display=new GuiDisplay();
 		player1=new HumanPlayer(display,Contains.Black);
 		player2= new HumanPlayer(display,Contains.White);
 		player1.setColor(color1);
@@ -167,16 +168,17 @@ public class GameController implements Initializable {
 		}
 		List< Pair<Integer,Integer> > movesVec=player.possibleMovesVector(board);
 		if (player.isNoMoves() && !rival.isNoMoves()){
-			showAlert("No moves available, your turn is passed");
+			display.printMessage("no moves available, so your turn is passed");
 		}
 		else if (player.isNoMoves() && rival.isNoMoves()){
-			showAlert("no moves for you too \n Game Over");
+			display.noMoves(player.getType());
+			display.printEnd(player.getType(), player.getScore(), rival.getScore());
 			return;
 		}
 		else{
 			Pair<Integer,Integer> chosenMove=boardfx.chosenMove();
 			if (chosenMove==null || !movesVec.contains(chosenMove)){
-				showAlert("Invalid choice, try again");
+				display.printMessage("Invalid choice, try again");
 				return;
 			}
 			logic.makeMove(chosenMove.getKey(),chosenMove.getValue());
@@ -184,7 +186,9 @@ public class GameController implements Initializable {
 			logic.resetPossibleMoves();
 		}
 		if(player.getScore()+rival.getScore()==board.getBoardSize()*board.getBoardSize()){
-			showAlert("Game Over");
+			player1Score.setText(Integer.toString(player1.getScore()));
+			player2Score.setText(Integer.toString(player2.getScore()));
+			display.printEnd(player.getType(), player.getScore(), rival.getScore());
 			return;
 		}
 		currentP=3-currentP;
@@ -196,10 +200,4 @@ public class GameController implements Initializable {
 		
 	}
 	
-	private void showAlert(String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
 }

@@ -11,7 +11,7 @@ public interface Display {
 	    * the output:prints a visual table of the board we created
 	    * the function operation:goes throw every cell in the board
 	    ****************************************************************************************/
-	    public void printBoard(Board board) ;
+	    public void printBoard(Board board);
 	    /***************************************************************************************
 	     * function name: printChosenMove
 	     * the input: the chosen pair and the type of the player
