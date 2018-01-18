@@ -24,6 +24,11 @@ import javafx.stage.Stage;
 import javafx.util.Pair;
 import reversi.*;
 
+/**
+ * Class:GameController
+ * game platform
+ * 
+ */
 public class GameController implements Initializable {
 	@FXML
 	private HBox root; 
@@ -50,6 +55,10 @@ public class GameController implements Initializable {
     private Display display;
     private static final int height =400;
 
+    /**
+     * function name: initialize
+     * creates the game objects, sets a listener for the board
+     */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		setVariables();
@@ -93,6 +102,10 @@ public class GameController implements Initializable {
 		});
 	}
 	
+	/**
+	 * function name: start
+	 * when the button is clicked the game starts over 
+	 */
 	@FXML
 	protected void start() {
 		try {
@@ -107,6 +120,10 @@ public class GameController implements Initializable {
 		}
 	}
 	
+	/**
+	 * function name: end
+	 * when the button is clicked the game is over and we return to the Menu
+	 */
 	@FXML
 	protected void end() {
 		try {
@@ -121,6 +138,10 @@ public class GameController implements Initializable {
 		}
 	}
 	
+	/**
+	 * function name: setVariables
+	 * we set default variables, if we can read from the file we replace them
+	 */
 	private void setVariables(){
 		//set default
 		this.color1=Color.valueOf("0x000000ff");
@@ -156,6 +177,10 @@ public class GameController implements Initializable {
 	    }
 	}
 	
+	/**
+	 * function name: playOneTurn
+	 * we play a single turn (if possible), update the right labels and check if the game ended
+	 */
 	private void playOneTurn(){
 		logic.possibleMoves();
 		Player player,rival;

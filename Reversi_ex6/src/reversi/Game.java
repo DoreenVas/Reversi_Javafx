@@ -1,6 +1,10 @@
 package reversi;
 import javafx.util.Pair;
 
+/**
+* class name: Game
+* description: runs the game
+*/
 public class Game {
 	private Player player;
 	private Player rival;
@@ -9,6 +13,15 @@ public class Game {
 	private boolean gameOn;//true if the game is still on
 	private Display display;
 	
+	/**
+	 * constructor name:Game
+	 * @param player1
+	 * @param player2
+	 * @param board
+	 * @param logic
+	 * @param display
+	 * initializes the fields
+	 */
 	public Game(Player player1,Player player2,Board board, GameLogic logic,Display display) {
 		gameOn=true;
 	    player=player1;//player is the player currently playing
@@ -18,7 +31,10 @@ public class Game {
 	    this.display=display;
 	}
 
-
+	/**
+	 *  function name: play
+	 *  runs the game
+	 */
 	public void play() {
 	    while (gameOn) {
 	    	display.printMessage("Current board:");
@@ -49,6 +65,10 @@ public class Game {
 	    }
 	}
 
+	/**
+	 * function name: swap
+	 * flips the playing and "watching" players
+	 */
 	private void swap()
 	{
 	    Player pSwap = this.player;
