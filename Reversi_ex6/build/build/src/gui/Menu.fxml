@@ -8,12 +8,12 @@
 
 <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="35.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuController">
    <children>
-      <Label prefHeight="87.0" prefWidth="235.0" text="Reversi Game">
+      <Label lineSpacing="5.0" prefHeight="87.0" prefWidth="235.0" text="Reversi Game" textFill="WHITE">
          <font>
-            <Font size="39.0" />
+            <Font name="Eras Medium ITC" size="39.0" />
          </font></Label>
-      <Button fx:id="play" mnemonicParsing="false" onAction="#play" text="Play" />
-      <Button fx:id="settings" mnemonicParsing="false" onAction="#settings" text="Settings" />
-      <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+      <Button fx:id="play" mnemonicParsing="false" onAction="#play" prefHeight="39.0" prefWidth="88.0" text="Play" />
+      <Button fx:id="settings" mnemonicParsing="false" onAction="#settings" prefHeight="39.0" prefWidth="88.0" text="Settings" />
+      <Button fx:id="exit" mnemonicParsing="false" onAction="#exit" prefHeight="39.0" prefWidth="88.0" text="Exit" />
    </children>
 </VBox>

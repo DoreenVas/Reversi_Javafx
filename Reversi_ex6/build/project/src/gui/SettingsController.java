@@ -18,6 +18,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
+/**
+ * Class: SettingsController
+ * allows you to change the settings of the game
+ */
 public class SettingsController implements Initializable {
 
 	@FXML
@@ -33,7 +37,10 @@ public class SettingsController implements Initializable {
     @FXML
     private Button back;
     
-
+    /**
+     * function name: initialize
+     * we set the settings to the ones in the file, if non existing or corrupted we set to default
+     */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		try{
@@ -65,7 +72,10 @@ public class SettingsController implements Initializable {
 		
 	}
     
-    
+    /**
+     * function name: submit
+     * when the button is clicked the settings are written to a file and we go back to the Menu
+     */
 	@FXML
 	protected void submit() {
 		Color color1 = colorPicker1.getValue();
@@ -100,6 +110,7 @@ public class SettingsController implements Initializable {
 			Stage stage = (Stage) submit.getScene().getWindow();
 			VBox root = (VBox)FXMLLoader.load(getClass().getResource("Menu.fxml"));
 			Scene scene = new Scene(root,400,400);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setTitle("Reversi Game");
 			stage.setScene(scene);
 			stage.show();
@@ -108,13 +119,17 @@ public class SettingsController implements Initializable {
 		}
 	}
 	
-	
+	/**
+	 * function name: back
+	 * when the button is clicked we go back to the Menu without making changes
+	 */
 	@FXML
 	protected void back() {
 		try {
 			Stage stage = (Stage) back.getScene().getWindow();
 			VBox root = (VBox)FXMLLoader.load(getClass().getResource("Menu.fxml"));
 			Scene scene = new Scene(root,400,400);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setTitle("Reversi Game");
 			stage.setScene(scene);
 			stage.show();
@@ -123,6 +138,11 @@ public class SettingsController implements Initializable {
 		}
 	}
 	
+	/**
+	 * function name: showAlert
+	 * @param message
+	 * shows an alert on the screen with the massage
+	 */
 	private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setHeaderText(null);

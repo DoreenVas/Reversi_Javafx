@@ -7,13 +7,23 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.util.Pair;
 
-
+/**
+ * Class GameBoard
+ * the board of the game
+ */
 public class GameBoard extends GridPane {
 	private Board board;
 	private Color color1;
 	private Color color2;
 	
-	//constructor
+	/**
+	 * Constructor name: GameBoard
+	 * @param board
+	 * @param color1
+	 * @param color2
+	 * @param height
+	 * initializes the starting state
+	 */
 	public GameBoard(Board board,Color color1,Color color2, double height) {
 		this.board=board;
 		this.color1=color1;
@@ -33,8 +43,13 @@ public class GameBoard extends GridPane {
 				this.add(cell,i,j);
 			}
 		}
+		
 	}
 	
+	/**
+	 * function name: draw
+	 * changes the cells to match the current board
+	 */
 	public void draw() {
 		for (Node node:this.getChildren()){
 			int i =GridPane.getRowIndex(node);
@@ -52,6 +67,11 @@ public class GameBoard extends GridPane {
 		}					 
 	}
 	
+	/**
+	 * function name: chosenMove
+	 * @return Pair<Integer,Integer>
+	 * goes over the cells and looks for the indexes of the clicked one
+	 */
 	public Pair<Integer,Integer> chosenMove(){
 		for (Node node:this.getChildren()){
 			int i =GridPane.getRowIndex(node);

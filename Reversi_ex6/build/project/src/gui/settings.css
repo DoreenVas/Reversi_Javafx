@@ -1,3 +1,7 @@
+.root {
+	-fx-background-image: url("settings.jpg")
+}
+
 .choice-box {
     -fx-pref-width: 188;
 }
@@ -5,3 +9,5 @@
 .choice-box .context-menu {
     -fx-pref-width: 188; 
 }
+
+

@@ -1,11 +1,29 @@
 package reversi;
 
+/**
+* class name: DefaultLogic
+* contains the default rules of the game
+*/
 public class DefaultLogic extends GameLogic{
 
+	/**
+	 * constructor name: DefaultLogic
+	 * @param player1p
+	 * @param player2p
+	 * @param board
+	 * calls GameLogic constructor
+	 */
 	public DefaultLogic(Player player1p, Player player2p, Board board) {
 		super(player1p, player2p, board);
 	}
 
+	/**
+	 * function name:  makeMove
+	 * @param row
+	 * @param col
+	 * puts the players disk in place and +1 to his score,than goes throw
+	 * the cell flipOption and changes "sum" disks in each direction and changes accordingly the score
+	 */
 	@Override
 	public void makeMove(int row, int col) {
 		 board.cellAt(row,col).setContains(player.getType());
@@ -21,9 +39,12 @@ public class DefaultLogic extends GameLogic{
 		            }
 		        }
 		    }
-	
 	}
 
+	/**
+	 * function name:  possibleMoves
+	 *  goes throw the Cells in board and if sees a player disk calls checkCell for that cell
+	 */
 	@Override
 	public void possibleMoves() {
 		player.setNoMoves(true);
@@ -35,6 +56,13 @@ public class DefaultLogic extends GameLogic{
 	    }
 	}
 	
+	/**
+	 * function name:  checkCell
+	 * @param row
+	 * @param col
+	 * checks the close cell in each direction to see if it
+	 * contains the rival type(Black/White). if so sends it to checkDirection
+	 */
 	 private void checkCell(int row, int col) {
 		 for(int i=row-1;i<=row+1;i++){
 		        for(int j=col-1;j<=col+1;j++){
@@ -46,6 +74,15 @@ public class DefaultLogic extends GameLogic{
 		    }
 	}
 
+	 /**
+	  * function name:  checkDirection
+	  * @param row
+	  * @param col
+	  * @param deltaRow
+	  * @param deltaCol
+	  * while we see a rival type disk we continue in that way,if it ends with a space we
+* set the cell option to true and update the changeFlipOptions with the sum we reached.
+	  */
 	 private void checkDirection(int row,int col,int deltaRow,int deltaCol) {
 		 int i = row + deltaRow;
 		    int j = col + deltaCol;
