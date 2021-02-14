@@ -8,5 +8,5 @@ The player can choose the board size and in the GUI format also the colors for t
 
 ***Game example in GUI display and the settings used*** 
 
-![](https://github.com/DoreenVas/reversi_javafx/blob/master/GamePic/game2.png)
-![](https://github.com/DoreenVas/reversi_javafx/blob/master/GamePic/settings.png)
+![](https://github.com/DoreenVas/reversi_javafx/blob/master/GamePic/g1.jpg)
+![](https://github.com/DoreenVas/reversi_javafx/blob/master/GamePic/g2.jpg)
