@@ -2,6 +2,10 @@
 Reversi game in GUI and Console formats.
 The player can choose the board size and in the GUI format also the colors for the players's disks which will be saved until changed again.
 
-***Console game example with a 4X4 board***
+***Game example in a console display with a 4X4 board***
+![](https://github.com/DoreenVas/ProjectMSC/blob/master/Poster.jpg)
 
-***GUI game images*** 
+***Images of the GUI display *** 
+![](https://github.com/DoreenVas/ProjectMSC/blob/master/Poster.jpg)
+![](https://github.com/DoreenVas/ProjectMSC/blob/master/Poster.jpg)
+![](https://github.com/DoreenVas/ProjectMSC/blob/master/Poster.jpg)
